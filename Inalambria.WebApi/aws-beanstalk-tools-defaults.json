@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-2",
+    "configuration" : "Debug",
+    "framework"     : "netcoreapp3.1",
+    "self-contained" : false,
+    "application"    : "InalambriaWebApi",
+    "environment"    : "InalambriaWebApi-prod",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-8694b5f5,sg-0523fb6ca3b55cdad\";\"aws:ec2:vpc,Subnets\"=\"subnet-5f09ed22\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.1.2 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "inalambriawebapi-prod",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

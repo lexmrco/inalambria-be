@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Inalambria.Infrastructure;
 using Inalambria.Infrastructure.Repositories;
+using Inalambria.WebApi.NLog;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,6 +37,9 @@ namespace Inalambria.WebApi
             services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 
             services.AddControllers();
+
+            services.AddSingleton<ILoggerManager, LoggerManager>();
+
             var jwtSettings = Configuration.GetSection("JWT");
             GlobalProperties.JWT_SecretKey = jwtSettings.GetValue<string>("SecretKey");
             GlobalProperties.JWT_ExpirationHours = jwtSettings.GetValue<int>("ExpirationHours");
@@ -66,6 +70,8 @@ namespace Inalambria.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ConfigureCustomExceptionMiddleware();
 
             app.UseRouting();
             // global cors policy
