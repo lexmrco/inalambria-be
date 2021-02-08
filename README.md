@@ -1,4 +1,4 @@
-# Proyecto Frontend Prueba técnica Inalambria
+# Proyecto Backend Prueba técnica Inalambria
 ## Endpoints
 ###
 ##### Identificar si la api se está ejecutando
