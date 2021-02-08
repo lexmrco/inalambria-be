@@ -44,6 +44,6 @@
    * Token: Token generado por la api
 * Response: Detalle de la factura de venta, lista de items de la factura
 
-## Autor 鉁掞笍
+## Autor
 
-* **Alexander Moreno** _Desarrollo, documentaci贸n_
+* **Alexander Moreno** _Desarrollo, documentación_
